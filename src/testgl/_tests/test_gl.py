@@ -2,8 +2,6 @@ import numpy as np
 from vispy import scene, use
 from vispy.testing import (
     TestingCanvas,
-    requires_application,
-    requires_pyopengl,
 )
 
 
@@ -15,8 +13,6 @@ def teardown_module(module):
     use(gl="gl2")
 
 
-@requires_pyopengl()
-@requires_application()
 def test_mesh_with_vertex_values():
     size = (80, 60)
     with TestingCanvas(size=size) as c:
